@@ -1,69 +1,135 @@
-# React + TypeScript + Vite
+# 🛍️ Shopping Cart UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive and modern frontend for an e-commerce shopping cart, built with **React**, **Vite**, and **Tailwind CSS**. It integrates with a Node.js + Prisma backend and provides a smooth user experience for browsing products, viewing details, and managing the cart.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- 🔍 Product listing with search, filter, and sorting
+- 📄 Product detail pages (by slug)
+- 🛒 Cart management (add, update, remove)
+- ⚡ Fast and lightweight UI powered by Vite
+- 🌙 Light/dark theme toggle (optional)
+- 🔗 Connected to a REST API backend
+- 💡 Deployed on **Netlify**
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🧰 Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+| Tech        | Purpose                            |
+|-------------|------------------------------------|
+| React       | Frontend library                   |
+| Vite        | Fast dev server & build tool       |
+| Tailwind CSS| Utility-first styling              |
+| React Router| Routing between pages              |
+| Axios       | HTTP client for API requests       |
+| Netlify     | Frontend deployment                |
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 🔗 Live Demo
+
+👉 [Live Site](https://your-frontend.netlify.app](https://buysomething-shop.netlify.app/)  
+🔙 [Backend Repo](https://github.com/MongeziMasombuka/shopping-cart-api)
+
+---
+
+## 📦 Folder Structure [Example]
+
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+shopping-cart-ui/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── context/
+│   ├── data/
+│   ├── lib/
+│   ├── utils/
+│   ├── App.tsx
+│   └── main.tsx
+├── vite.config.js
+└── .env
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+````
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## ⚙️ Setup Instructions
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/MongeziMasombuka/shopping-cart-ui.git
+cd shopping-cart-ui
+````
+
+### 2. Install Dependencies
+
+```bash
+npm install
 ```
+
+### 3. Create `.env` File
+
+```env
+VITE_API_URL=https://your-backend.onrender.com/api
+```
+
+Update this with the actual backend URL if different.
+
+### 4. Start Development Server
+
+```bash
+npm run dev
+```
+
+Visit `http://localhost:5173` in your browser.
+
+---
+
+## 🔐 Environment Variables
+
+| Variable       | Required | Example Value                           |
+| -------------- | -------- | --------------------------------------- |
+| `VITE_API_URL` | ✅        | `https://your-backend.onrender.com/api` |
+
+---
+
+## 🛠️ Available Scripts
+
+| Script    | Command           | Description                   |
+| --------- | ----------------- | ----------------------------- |
+| Start Dev | `npm run dev`     | Start the Vite dev server     |
+| Build     | `npm run build`   | Build for production          |
+| Preview   | `npm run preview` | Preview built version locally |
+
+---
+
+## 🌐 Deployment (Netlify)
+
+1. Push to GitHub
+2. Connect GitHub repo to [Netlify](https://netlify.com)
+3. Set build command: `npm run build`
+4. Set publish directory: `dist`
+5. Add your `VITE_API_URL` in Netlify's environment settings
+
+---
+
+## 🧪 Future Improvements
+
+* 🔐 User authentication (JWT or OAuth)
+* 🗂️ Wishlist / Order history
+* 🧪 Unit and E2E tests with Vitest or Cypress
+
+---
+
+## 🧑‍💻 Author
+
+**Mongezi Masombuka**
+📎 [GitHub](https://github.com/MongeziMasombuka)
+
+
